@@ -1,0 +1,19 @@
+{
+  "name": "plasticine-resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/main/electron.js",
+  "scripts": {
+    "start:main": "electron ./app/main/electron.js",
+    "prepare:electron": "cross-env ELECTRON_MIRROR=https://cdn.npmmirror.com/binaries/electron/ node ./node_modules/electron/install.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^22.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
