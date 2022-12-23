@@ -1,3 +1,5 @@
+const { resolve } = require('path')
+
 const { BrowserWindow, app } = require('electron')
 
 function createWindow() {
@@ -7,10 +9,17 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    autoHideMenuBar: true,
   })
 
-  mainWindow.loadFile('./index.html')
+  if (isDev()) {
+    mainWindow.loadURL('http://127.0.0.1:5173')
+  } else {
+    mainWindow.loadURL(`file://${resolve(__dirname, '../../dist/index.html')}`)
+  }
 }
+
+const isDev = () => process.env.NODE_ENV === 'development'
 
 app.whenReady().then(() => {
   createWindow()
