@@ -2,11 +2,6 @@ const { resolve } = require('path')
 
 const r = (path) => resolve(__dirname, path)
 
-/** @description webpack 配置文件路径 */
-const COMMON_DEV_PATH = r('webpack.common.dev.js')
-const RENDERER_DEV_PATH = r('webpack.renderer.dev.js')
-const WEB_DEV_PATH = r('webpack.web.dev.js')
-
 /** @description bable 配置文件路径 */
 const BABEL_CONFIG_PATH = r('../babel.config.js')
 
@@ -27,12 +22,7 @@ const DIST_TEMPLATE_PATH = r('../dist/index.html')
 // ========== electron  ==========
 
 module.exports = {
-  COMMON_DEV_PATH,
-  RENDERER_DEV_PATH,
-  WEB_DEV_PATH,
-
   BABEL_CONFIG_PATH,
-
   MAIN_ENTRY_PATH,
   RENDERER_ENTRY_PATH,
   DIST_PATH,

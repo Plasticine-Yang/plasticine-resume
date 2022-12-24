@@ -1,6 +1,6 @@
-const { resolve } = require('path')
+import { resolve } from 'path'
 
-const { BrowserWindow, app } = require('electron')
+import { app, BrowserWindow } from 'electron'
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -18,6 +18,11 @@ function createWindow() {
   } else {
     mainWindow.loadURL(`file://${resolve(__dirname, '../../dist/index.html')}`)
   }
+
+  // 设置窗口标题
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.setTitle('Plasticine Counter')
+  })
 }
 
 const isDev = () => process.env.NODE_ENV === 'development'

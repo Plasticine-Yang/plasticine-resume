@@ -1,4 +1,7 @@
 node_modules
 dist
 webpack
+
 .eslintrc.js
+postcss.config.js
+babel.config.js
