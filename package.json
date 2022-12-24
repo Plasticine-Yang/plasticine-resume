@@ -7,7 +7,20 @@
     "start:main": "webpack --config ./webpack/webpack.main.dev.js && electron ./dist/electron.js",
     "start:renderer": "webpack-dev-server --config ./webpack/webpack.renderer.dev.js",
     "start:web": "webpack-dev-server --config ./webpack/webpack.web.dev.js",
+    "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx",
+    "commit": "cz",
+    "prepare": "husky install",
     "prepare:electron": "cross-env ELECTRON_MIRROR=https://cdn.npmmirror.com/binaries/electron/ node ./node_modules/electron/install.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "pnpm lint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -35,14 +48,19 @@
     "@typescript-eslint/parser": "^5.47.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
+    "commitizen": "^4.2.6",
+    "commitlint": "^17.3.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
+    "cz-git": "^1.4.1",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.20",
     "postcss-loader": "^7.0.2",
     "prettier": "^2.8.1",
