@@ -3,16 +3,17 @@ const { resolve } = require('path')
 const { merge } = require('webpack-merge')
 
 const baseConfig = require('./webpack.base.js')
+const { MAIN_ENTRY_PATH, DIST_PATH } = require('./constants.js')
 
 /** @type { import('webpack').Configuration } */
 const mainConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: resolve(__dirname, '../app/main/electron.js'),
+  entry: MAIN_ENTRY_PATH,
   target: 'electron-main',
   output: {
+    path: DIST_PATH,
     filename: 'electron.js',
-    path: resolve(__dirname, '../dist'),
   },
 }
 

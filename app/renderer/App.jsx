@@ -4,10 +4,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/">
-          <div>Plasticine Resume</div>
-          <div>Hello Electron</div>
-        </Route>
+        <Route path="/" element={<div>Hello</div>} />
       </Routes>
     </Router>
   )
