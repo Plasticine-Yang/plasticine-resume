@@ -7,7 +7,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@src': resolve(__dirname, '../app/renderer'),
     },
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)/,
+        test: /\.(js|jsx|ts|tsx)/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',

@@ -12,10 +12,10 @@ const BABEL_CONFIG_PATH = r('../babel.config.js')
 
 // ========== electron  ==========
 /** @description 主进程入口 */
-const MAIN_ENTRY_PATH = r('../app/main/electron.js')
+const MAIN_ENTRY_PATH = r('../app/main/electron.ts')
 
 /** @description 渲染进程入口 */
-const RENDERER_ENTRY_PATH = r('../app/renderer/index.jsx')
+const RENDERER_ENTRY_PATH = r('../app/renderer/index.tsx')
 
 const DIST_PATH = r('../dist')
 
