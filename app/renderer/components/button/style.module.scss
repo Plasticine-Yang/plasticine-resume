@@ -1,0 +1,47 @@
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
+  cursor: pointer;
+
+  .btn-text {
+    font-size: 1rem;
+  }
+}
+
+// type
+.primary {
+  background: #282a36;
+  color: white;
+
+  &:hover {
+    background-color: rgba($color: #282a36, $alpha: 0.6);
+  }
+}
+
+.text {
+  background: transparent;
+  color: white;
+}
+
+// size
+.default {
+  transform: scale(1);
+}
+
+.large {
+  transform: scale(1.5);
+}
+
+.small {
+  transform: scale(0.8);
+}
+
+.tiny {
+  transform: scale(0.5);
+}
+
+// round
+.round {
+  border-radius: 30px;
+}

@@ -1,15 +1,11 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 
-import Counter from '@src/components/counter'
+import { router } from './router'
 
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Counter />} />
-      </Routes>
-    </Router>
-  )
+import './style/styles.scss'
+
+const App: React.FC = () => {
+  return <RouterProvider router={router} />
 }
 
 export default App

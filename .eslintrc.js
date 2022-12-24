@@ -20,6 +20,11 @@ module.exports = {
   },
 
   rules: {
+    // react
+    'react/prop-types': 'off',
+
+    // typescript
     '@typescript-eslint/no-non-null-assertion': 'off',
+
   },
 }
