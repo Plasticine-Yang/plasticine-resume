@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const { r } = require('./utils')
 
 /** @type { import('webpack').Configuration } */
 module.exports = {
@@ -9,7 +9,10 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
-      '@src': resolve(__dirname, '../app/renderer'),
+      '@src': r('../app/renderer'),
+      '@components': r('../app/renderer/components'),
+      '@pages': r('../app/renderer/pages'),
+      '@assets': r('../app/renderer/assets')
     },
   },
 

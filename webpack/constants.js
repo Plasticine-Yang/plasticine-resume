@@ -1,9 +1,6 @@
-const { resolve } = require('path')
+const { r } = require('./utils')
 
-const r = (path) => resolve(__dirname, path)
-
-/** @description bable 配置文件路径 */
-const BABEL_CONFIG_PATH = r('../babel.config.js')
+const PROJECT_ROOT = __dirname
 
 // ========== electron  ==========
 /** @description 主进程入口 */
@@ -22,7 +19,7 @@ const DIST_TEMPLATE_PATH = r('../dist/index.html')
 // ========== electron  ==========
 
 module.exports = {
-  BABEL_CONFIG_PATH,
+  PROJECT_ROOT,
   MAIN_ENTRY_PATH,
   RENDERER_ENTRY_PATH,
   DIST_PATH,

@@ -12,7 +12,10 @@
     "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["./app/renderer/*"]
+      "@src/*": ["./app/renderer/*"],
+      "@components/*": ["./app/renderer/components/*"],
+      "@pages/*": ["./app/renderer/pages/*"],
+      "@assets/*": ["./app/renderer/assets/*"]
     }
   },
   "include": ["app/**/*.ts", "app/**/*.tsx", "app/**/*.d.ts"],

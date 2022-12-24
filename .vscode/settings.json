@@ -1,5 +1,7 @@
 {
   "path-intellisense.mappings": {
-    "@src": "${workspaceFolder}/app/renderer"
+    "@src": "${workspaceFolder}/app/renderer",
+    "@components": "${workspaceFolder}/app/renderer/components",
+    "@pages": "${workspaceFolder}/app/renderer/pages"
   }
 }
