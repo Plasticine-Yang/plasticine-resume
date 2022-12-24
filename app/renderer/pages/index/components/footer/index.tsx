@@ -14,7 +14,9 @@ const Footer: React.FC = () => {
           <Button
             type="text"
             onClick={() => {
-              shell.openExternal('https://github.com/Plasticine-Yang')
+              shell.openExternal(
+                'https://github.com/Plasticine-Yang/plasticine-resume',
+              )
             }}
           >
             Github
