@@ -4,8 +4,6 @@ import { app, BrowserWindow } from 'electron'
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -19,8 +17,8 @@ function createWindow() {
     mainWindow.loadURL(`file://${resolve(__dirname, '../../dist/index.html')}`)
   }
 
-  // 设置窗口标题
   mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.maximize()
     mainWindow.setTitle('Plasticine Counter')
   })
 }
