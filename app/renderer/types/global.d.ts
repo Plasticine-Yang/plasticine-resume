@@ -6,9 +6,19 @@ declare module '*.module.scss' {
   export default classes
 }
 
+declare module '*.module.css' {
+  const classes: CSSModuleClasses
+  export default classes
+}
+
 // CSS
 declare module '*.scss' {
   const css: Record<string, never>
+  export default css
+}
+
+declare module '*.css' {
+  const css: undefined
   export default css
 }
 
