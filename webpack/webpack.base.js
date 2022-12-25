@@ -12,7 +12,8 @@ module.exports = {
       '@src': r('../app/renderer'),
       '@components': r('../app/renderer/components'),
       '@pages': r('../app/renderer/pages'),
-      '@assets': r('../app/renderer/assets')
+      '@assets': r('../app/renderer/assets'),
+      '@utils': r('../app/renderer/utils'),
     },
   },
 
