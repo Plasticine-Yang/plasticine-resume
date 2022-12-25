@@ -10,6 +10,19 @@ const {
   DIST_TEMPLATE_PATH,
 } = require('./constants.js')
 
+const cssLoaderOptions = {
+  modules: {
+    mode: (resourcePath) => {
+      // 只对 module.css 后缀的文件启用 css module
+      if (/module.(scss|sass|css)$/i.test(resourcePath)) return 'local'
+
+      return 'global'
+    },
+    // 指定 css modules 生成的类名格式
+    localIdentName: '[local]---[hash:base64:5]',
+  },
+}
+
 /** @type { import('webpack').Configuration } */
 const rendererConfig = {
   mode: 'development',
@@ -39,7 +52,14 @@ const rendererConfig = {
       // css
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: cssLoaderOptions,
+          },
+          'postcss-loader',
+        ],
       },
 
       // sass | scss
@@ -50,18 +70,7 @@ const rendererConfig = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: {
-              modules: {
-                mode: (resourcePath) => {
-                  // 只对 module.css 后缀的文件启用 css module
-                  if (/module.(scss|css)$/i.test(resourcePath)) return 'local'
-
-                  return 'global'
-                },
-                // 指定 css modules 生成的类名格式
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-              },
-            },
+            options: cssLoaderOptions,
           },
           'postcss-loader',
           'sass-loader',
