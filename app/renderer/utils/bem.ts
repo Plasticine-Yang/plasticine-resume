@@ -47,7 +47,8 @@ const createNameSpace = (
    */
   const is = (stateName: string, active?: boolean) => {
     const shouldGenerate = active !== undefined ? active : true
-    return stateName && shouldGenerate ? `${STATE_PREFIX}${stateName}` : ''
+    const cls = stateName && shouldGenerate ? `${STATE_PREFIX}${stateName}` : ''
+    return cssModuleClasses ? cssModuleClasses[cls] : cls
   }
 
   /**
