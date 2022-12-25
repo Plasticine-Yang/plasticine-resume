@@ -6,7 +6,6 @@
   "scripts": {
     "start:main": "webpack --config ./webpack/webpack.main.dev.js && electron ./dist/electron.js",
     "start:renderer": "webpack-dev-server --config ./webpack/webpack.renderer.dev.js",
-    "start:web": "webpack-dev-server --config ./webpack/webpack.web.dev.js",
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx",
     "commit": "cz",
     "prepare": "husky install",
