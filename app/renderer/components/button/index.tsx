@@ -2,6 +2,8 @@ import { MouseEvent, PropsWithChildren } from 'react'
 
 import c from 'classnames'
 
+import { createNameSpace } from '@utils/index'
+
 import s from './style.module.scss'
 
 interface ButtonProps {
@@ -17,16 +19,18 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = (props) => {
   const { onClick: emitClick } = props
   const { children } = props
 
+  const ns = createNameSpace('button', s)
+
   return (
     <button
-      className={c(s.button, s[type], s[size], round ? s.round : undefined)}
+      className={c(ns.b(), ns.m(type), ns.m(size), ns.is('round', round))}
       onClick={(e) => {
         emitClick && emitClick(e)
       }}
     >
-      {typeof children === 'string' ? (
-        <p className={s['btn-text']}>{children}</p>
-      ) : undefined}
+      {typeof children === 'string' && (
+        <p className={ns.e('text')}>{children}</p>
+      )}
     </button>
   )
 }
