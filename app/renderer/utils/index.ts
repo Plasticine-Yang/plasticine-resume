@@ -1,1 +1,0 @@
-export { createNameSpace } from './bem'

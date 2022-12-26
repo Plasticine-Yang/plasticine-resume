@@ -2,7 +2,7 @@ import { MouseEvent, PropsWithChildren } from 'react'
 
 import c from 'classnames'
 
-import { createNameSpace } from '@utils/index'
+import { createNameSpace } from 'plasticine-bem'
 
 import s from './style.module.scss'
 
@@ -19,7 +19,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = (props) => {
   const { onClick: emitClick } = props
   const { children } = props
 
-  const ns = createNameSpace('button', s)
+  const ns = createNameSpace('button', { cssModuleClasses: s })
 
   return (
     <button
