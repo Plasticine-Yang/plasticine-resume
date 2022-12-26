@@ -1,18 +1,16 @@
-.pl-button {
+@use 'bem' as *;
+
+@include b(button) {
   border: none;
   border-radius: 10px;
   padding: 10px 30px;
   cursor: pointer;
 
-  // ============== elements ==============
-  &__text {
+  @include e(text) {
     font-size: 1rem;
   }
 
-  // ============== modifiers ==============
-
-  // type
-  &--primary {
+  @include m(primary) {
     background: #282a36;
     color: white;
 
@@ -21,32 +19,28 @@
     }
   }
 
-  &--text {
+  @include m(text) {
     background: transparent;
     color: white;
   }
 
-  // size
-  &--default {
+  @include m(default) {
     transform: scale(1);
   }
 
-  &--large {
+  @include m(large) {
     transform: scale(1.5);
   }
 
-  &--small {
+  @include m(small) {
     transform: scale(0.8);
   }
 
-  &--tiny {
+  @include m(tiny) {
     transform: scale(0.5);
   }
 
-  // ============== states ==============
-
-  // round
-  &.is-round {
+  @include when(round) {
     border-radius: 30px;
   }
 }

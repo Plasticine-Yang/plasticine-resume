@@ -68,12 +68,22 @@ const rendererConfig = {
         exclude: /node_modules/,
         use: [
           'style-loader',
+
           {
             loader: 'css-loader',
             options: cssLoaderOptions,
           },
+
           'postcss-loader',
-          'sass-loader',
+
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: ['node_modules/plasticine-bem/dist/sass/'],
+              },
+            },
+          },
         ],
       },
 

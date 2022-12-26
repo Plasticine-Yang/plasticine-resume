@@ -16,7 +16,8 @@
       "@components/*": ["./app/renderer/components/*"],
       "@pages/*": ["./app/renderer/pages/*"],
       "@assets/*": ["./app/renderer/assets/*"],
-      "@utils/*": ["./app/renderer/utils/*"]
+      "@utils/*": ["./app/renderer/utils/*"],
+      "@theme-chalk/*": ["./app/renderer/theme-chalk/*"]
     }
   },
   "include": ["app/**/*.ts", "app/**/*.tsx", "app/**/*.d.ts"],

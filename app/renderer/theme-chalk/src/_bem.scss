@@ -1,0 +1,4 @@
+@forward 'plasticine-bem/mixins/config' with (
+  $namespace: 'pl'
+);
+@forward 'plasticine-bem';

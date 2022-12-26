@@ -4,7 +4,7 @@ import c from 'classnames'
 
 import { createNameSpace } from 'plasticine-bem'
 
-import s from './style.module.scss'
+import '@theme-chalk/src/button.scss'
 
 interface ButtonProps {
   type?: 'primary' | 'text'
@@ -19,7 +19,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = (props) => {
   const { onClick: emitClick } = props
   const { children } = props
 
-  const ns = createNameSpace('button', { cssModuleClasses: s })
+  const ns = createNameSpace('button')
 
   return (
     <button

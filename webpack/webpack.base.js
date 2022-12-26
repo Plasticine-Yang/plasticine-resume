@@ -14,6 +14,7 @@ module.exports = {
       '@pages': r('../app/renderer/pages'),
       '@assets': r('../app/renderer/assets'),
       '@utils': r('../app/renderer/utils'),
+      '@theme-chalk': r('../app/renderer/theme-chalk'),
     },
   },
 

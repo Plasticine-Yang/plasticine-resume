@@ -32,7 +32,7 @@ specifiers:
   html-webpack-plugin: ^5.5.0
   husky: ^8.0.2
   lint-staged: ^13.1.0
-  plasticine-bem: ^0.2.1
+  plasticine-bem: ^0.3.0
   postcss: ^8.4.20
   postcss-loader: ^7.0.2
   prettier: ^2.8.1
@@ -51,7 +51,7 @@ specifiers:
 dependencies:
   classnames: 2.3.2
   electron: 22.0.0
-  plasticine-bem: 0.2.1
+  plasticine-bem: 0.3.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.6.0_biqbaboplfbrettd7655fr4n2y
@@ -5561,8 +5561,8 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /plasticine-bem/0.2.1:
-    resolution: {integrity: sha512-HslmvoeRqNnGJPywxxX71y2Rfl1B9ivFbEXtrIcN/+RbFMidmfen4ix9b+8pG5IgaXrJfYPLDnU66nJumbKO8w==}
+  /plasticine-bem/0.3.0:
+    resolution: {integrity: sha512-9Afowv3cqqef0zSZW02v2FjPm2ClHuGWYI+3OetU8oJD5KFpkF2ygIbQVseCZ0PkG5S55Hev7IDPV3m0jOK0hQ==}
     dev: false
 
   /postcss-loader/7.0.2_qxxfhhrl3yknjjmta266mo3u64:
