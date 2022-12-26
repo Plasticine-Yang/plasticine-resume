@@ -6,6 +6,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
@@ -25,6 +26,5 @@ module.exports = {
 
     // typescript
     '@typescript-eslint/no-non-null-assertion': 'off',
-
   },
 }
