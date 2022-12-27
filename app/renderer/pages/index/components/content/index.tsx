@@ -1,4 +1,4 @@
-import '@pages/index/styles.scss'
+import commonStyle from '@pages/index/style.module.scss'
 import Button from '@components/button'
 import logo from '@assets/logo.svg'
 
@@ -6,7 +6,7 @@ import s from './style.module.scss'
 
 const Content: React.FC = () => {
   return (
-    <section className="container">
+    <section className={commonStyle.container}>
       <div className={s.wrapper}>
         <div className={s.content}>
           <div className={s.info}>
