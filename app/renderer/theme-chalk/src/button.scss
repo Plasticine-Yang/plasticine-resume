@@ -1,27 +1,50 @@
 @use 'bem' as *;
+@use 'variables' as *;
 
 @include b(button) {
   border: none;
   border-radius: 10px;
   padding: 10px 30px;
   cursor: pointer;
+  transition: background 0.5s, color 0.5s;
 
   @include e(text) {
     font-size: 1rem;
   }
 
   @include m(primary) {
-    background: #282a36;
+    background: $primary-color;
     color: white;
 
     &:hover {
-      background-color: rgba($color: #282a36, $alpha: 0.6);
+      background: rgba($color: $primary-color, $alpha: 0.6);
+    }
+
+    &:active {
+      background: rgba($color: $primary-color, $alpha: 0.8);
     }
   }
 
   @include m(text) {
     background: transparent;
-    color: white;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+
+    &:active {
+      background: rgba($color: $primary-color, $alpha: 0.8);
+      color: white;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: white;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: black;
+    }
   }
 
   @include m(default) {
