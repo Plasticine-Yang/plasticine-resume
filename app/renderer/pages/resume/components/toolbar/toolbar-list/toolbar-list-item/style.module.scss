@@ -1,0 +1,15 @@
+.toolbar-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+
+  .display-name {
+    font-size: 1rem;
+  }
+
+  .summary {
+    color: gray;
+    font-size: 0.8rem;
+  }
+}
