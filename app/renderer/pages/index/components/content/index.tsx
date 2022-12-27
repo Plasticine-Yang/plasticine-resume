@@ -1,10 +1,16 @@
+import { useNavigate } from 'react-router-dom'
+
 import commonStyle from '@pages/index/style.module.scss'
 import Button from '@components/button'
 import logo from '@assets/logo.svg'
 
+import { ROUTE_PATHS } from '@src/router/routes'
+
 import s from './style.module.scss'
 
 const Content: React.FC = () => {
+  const navigate = useNavigate()
+
   return (
     <section className={commonStyle.container}>
       <div className={s.wrapper}>
@@ -15,7 +21,9 @@ const Content: React.FC = () => {
           </div>
 
           <div className={s['btn-group']}>
-            <Button round>快速体验</Button>
+            <Button round onClick={() => navigate(ROUTE_PATHS.RESUME)}>
+              快速体验
+            </Button>
           </div>
         </div>
 
